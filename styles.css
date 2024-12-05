@@ -1,0 +1,112 @@
+
+
+*{
+  transition: 1s;
+  margin: 0;
+}
+h1,h2{
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+}
+p,a{
+  font-family: "Lora", serif;
+  font-size: 1rem;
+}
+
+body{
+  box-sizing: border-box;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+  
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#navbar{
+  /* auto explicativo */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+}
+#navbar ul{
+  list-style: none;
+  padding-right: 40px;
+  
+}
+#navbar img{
+  height: 150px;
+  
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+#inicio{
+  background-image: url("./imagens/Colorful-Ink-Splash-Paint-Splatter-Graphics-77560059-1-1-580x387.jpg");
+  background-repeat: no-repeat;
+  background-position: 90%;
+
+}
+#welcome-section{
+  /* hero */
+  height: 300px;
+  padding-left: 30px;
+  width: 100%;
+  
+  display: flex;
+  align-items: end;
+}
+.inspo{
+  padding-left: 220px;
+  padding-bottom: 200px;
+  font-style: italic;
+  font-weight: 400;
+  color: black;
+  letter-spacing:  3px;
+  width: 100px;
+}
+
+
+#projects{
+  /* grid */
+  /* width: 100%; */
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 100px;
+  padding: 20px 10px;
+}
+.project-tile{
+  height: 500px;
+  width: 500px;
+  border: 2px dotted #f5f5f5;
+  display: flex;
+  flex-direction: column;
+}
+.project-tile:hover{
+  height: 550px;
+  width: 550px;
+}
+
+.project-tile img{
+  height: 400px;
+}
+
+#contact{
+  width: 100%;
+  text-align: center;
+  
+}
+
+#footer{
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(0deg, rgb(110, 47, 97) 0%, rgb(180, 160, 204) 50%, rgb(247, 245, 245) 100%);
+  text-align: center;
+  font-family: "Arizonia", serif;
+}
