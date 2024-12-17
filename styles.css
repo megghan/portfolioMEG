@@ -146,7 +146,7 @@ p,a{
   padding-top: 20px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 740px) {
   
   .container{
     display: block;
