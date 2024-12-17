@@ -1,23 +1,44 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=My+Soul&family=Waterfall&display=swap');
 
 *{
   transition: 1s;
-  margin: 0;
+  margin: 0px;
 }
-h1,h2{
-  font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
-}
-p,a{
-  font-family: "Lora", serif;
-  font-size: 1rem;
-}
-
 body{
   box-sizing: border-box;
   margin: 0;
   background-color: rgb(255, 255, 255);
   
+}
+hr{
+  border: 0;
+  height: 4px; 
+  background: radial-gradient(circle, #7577ff, #ff7eb3, transparent);
+}
+a{
+  text-decoration: none;
+  color: black;
+  
+}
+h1{
+  font-family: "Waterfall", sans-serif;
+  font-size: 3rem;
+  letter-spacing: .31rem;
+  /* font-family: "Arizonia"; */
+
+}
+h2,h3{
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+}
+h3{
+  padding: 10px;
+}
+p,a{
+  font-family: "Lora", serif;
+  font-size: 1rem;
+  padding: 10px;
 }
 .container{
   display: flex;
@@ -25,55 +46,42 @@ body{
   align-items: center;
 }
 #navbar{
-  /* auto explicativo */
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  width: 100%;
 }
 #navbar ul{
   list-style: none;
-  padding-right: 40px;
-  
-}
-#navbar img{
-  height: 150px;
-  
-}
-a{
-  text-decoration: none;
-  color: black;
+  padding-right: 0px;
+  padding-left: 0px;  
 }
 #inicio{
   background-image: url("./imagens/Colorful-Ink-Splash-Paint-Splatter-Graphics-77560059-1-1-580x387.jpg");
   background-repeat: no-repeat;
   background-position: 90%;
+  position: relative;
 
 }
 #welcome-section{
   /* hero */
   height: 300px;
-  padding-left: 30px;
-  width: 100%;
-  
+  /* width: 100%; */  
   display: flex;
   align-items: end;
 }
 .inspo{
-  padding-left: 220px;
-  padding-bottom: 200px;
   font-style: italic;
   font-weight: 400;
   color: black;
   letter-spacing:  3px;
-  width: 100px;
+  padding-top: 200px;
+  padding-bottom: 20px;
 }
 
-
-#projects{
-  /* grid */
-  /* width: 100%; */
+.projects{
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -83,24 +91,50 @@ a{
 }
 .project-tile{
   height: 500px;
-  width: 500px;
-  border: 2px dotted #f5f5f5;
+  width: 95%;
+  border: 2px dotted #d8d6d6;
   display: flex;
   flex-direction: column;
 }
 .project-tile:hover{
   height: 550px;
-  width: 550px;
+  width: 100%;
+  
 }
-
 .project-tile img{
   height: 400px;
 }
 
-#contact{
+#sobre{
   width: 100%;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr; 
+  gap: 5px; 
+}
+#sobre .dev{
+  grid-column: 2;
+  height: 400px;
+  width: 200px;  
+  display: grid; /* Usa grid para centralizar o conteúdo interno */
+  place-items: center;
+  padding-left: 0px;
   
+}
+#sobre .dev img{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+  
+  
+  
+}
+.sobre-mim-txt{
+  text-align: justify;
+}
+#sobre .contact{
+  grid-column: -1/1;
+  grid-row: 2;
 }
 
 #footer{
@@ -109,4 +143,41 @@ a{
   background: linear-gradient(0deg, rgb(110, 47, 97) 0%, rgb(180, 160, 204) 50%, rgb(247, 245, 245) 100%);
   text-align: center;
   font-family: "Arizonia", serif;
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  
+  .container{
+    display: block;
+    width: 100vp;
+  }
+
+  #welcome-section{
+    /* hero */
+    height: 300px;
+    /* width: 100%; */  
+    display: block;
+    text-align: center;
+    padding-top: 150px;
+  }
+  .inspo{
+    font-style: italic;
+    font-weight: 400;
+    color: black;
+    letter-spacing:  3px;
+    text-align: center;
+  }
+
+  #main,.projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    text-align: center;
+  }
+  .project-tile{
+    padding: 20px 0;
+
+  }
 }
